@@ -15,7 +15,7 @@ namespace ContactsAppUI
 		[STAThread]
 		static void Main()
 		{
-			Application.EnableVisualStyles();
+			Application.EnableVisualStyles(); //ff
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new ContactsApp());
 		}
