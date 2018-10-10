@@ -28,20 +28,23 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
 			this.SuspendLayout();
 			// 
-			// MainForm
+			// ContactsApp
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Name = "MainForm";
-			this.Text = "MainForm";
+			this.Name = "ContactsApp";
+			this.Text = "ContactsApp";
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
+
+		private System.ComponentModel.BackgroundWorker backgroundWorker1;
 	}
 }
 
