@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ContactsApp
 {
-	public class Project
+	/// <summary>
+	/// Интерфейс клонирования
+	/// </summary>
+	public interface ICloneable
 	{
-		/// <summary>
-		/// Список контактов
-		/// </summary>
-		public List<Contacts> Contacts { get; set; }
+		object Clone();
 	}
 }
