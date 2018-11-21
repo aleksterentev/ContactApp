@@ -1,6 +1,6 @@
 ﻿namespace ContactsAppUI
 {
-	partial class СontactsAppDesing
+	partial class Form1
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -49,6 +49,7 @@
 			this.listBox1.Name = "listBox1";
 			this.listBox1.Size = new System.Drawing.Size(146, 264);
 			this.listBox1.TabIndex = 3;
+			this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
 			// 
 			// vScrollBar1
 			// 
@@ -57,7 +58,7 @@
 			this.vScrollBar1.Size = new System.Drawing.Size(18, 264);
 			this.vScrollBar1.TabIndex = 4;
 			// 
-			// СontactsAppDesing
+			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -65,7 +66,7 @@
 			this.Controls.Add(this.vScrollBar1);
 			this.Controls.Add(this.listBox1);
 			this.Controls.Add(this.button1);
-			this.Name = "СontactsAppDesing";
+			this.Name = "Form1";
 			this.Text = "СontactsAppDesing";
 			this.Load += new System.EventHandler(this.СontactsAppDesing_Load);
 			this.ResumeLayout(false);

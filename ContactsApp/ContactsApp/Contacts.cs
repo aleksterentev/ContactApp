@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ContactsApp
 {
-	public class Contact : ICloneable
+	public class Contacts : ICloneable
 	{
 		/// <summary>
 		/// Имя
@@ -30,11 +30,11 @@ namespace ContactsApp
 		/// <summary>
 		/// Фамилия
 		/// </summary>
-		public string SecondName
+		public string Sername
 		{
 			get
 			{
-				return FirstLetterToUpper(_secondName);
+				return FirstLetterToUpper(_sername);
 			}
 
 			set
@@ -126,7 +126,7 @@ namespace ContactsApp
 		/// <summary>
 		/// ссылка ВКонтакте
 		/// </summary>
-		public string IDVk
+		public string IdVk
 		{
 			get
 			{
@@ -160,28 +160,22 @@ namespace ContactsApp
 		/// <returns></returns>
 		public object Clone()
 		{
-			return new Contact
+			return new Contacts
 			{
 				Name = this.Name,
-				SecondName = this.SecondName,
+				Sername = this.Sername,
 				Phone = this.Phone,
 				Birth = this.Birth,
 				Email = this.Email,
-				IDVk = this.IDVk
+				IdVk = this.IdVk
 			};
 		}
 
 		private string _name;
-
-		private string _secondName;
-
+		private string _sername;
 		private NumberPhone _phone;
-
 		private string _birth;
-
 		private string _eMail;
-
 		private string _idVk;
-
 	}
 }

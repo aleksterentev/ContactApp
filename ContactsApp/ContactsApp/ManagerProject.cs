@@ -13,12 +13,13 @@ namespace ContactsApp
 		/// <summary>
 		/// Сериализация
 		/// </summary>
-		/// <param name="path">Путь</param>
+		/// <param name="_path">Путь</param>
 		/// <param name="project">Сериализуемый класс</param>
-		public void Serialization(string path, Project project)
+		private static string _path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/save/ContactsApp.notes";
+		public static void Serialization(Project project)
 		{
 			JsonSerializer serializer = new JsonSerializer();
-			using (StreamWriter sw = new StreamWriter(path))
+			using (StreamWriter sw = new StreamWriter(_path))
 			using (JsonWriter writer = new JsonTextWriter(sw))
 			{
 				serializer.Serialize(writer, project);
@@ -30,11 +31,11 @@ namespace ContactsApp
 		/// </summary>
 		/// <param name="path">путь к десериализуемому файлу</param>
 		/// <returns>десериалиазуемый класс</returns>
-		public Project Deserialization(string path)
+		public Project Deserialization(string _path)
 		{
 			Project project = null;
 			JsonSerializer serializer = new JsonSerializer();
-			using (StreamReader sr = new StreamReader(path))
+			using (StreamReader sr = new StreamReader(_path))
 			using (JsonReader reader = new JsonTextReader(sr))
 			{
 				project = (Project)serializer.Deserialize(reader);

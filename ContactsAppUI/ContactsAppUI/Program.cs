@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ContactsAppUI;
 
 namespace ContactsAppUI
 {
@@ -15,9 +14,10 @@ namespace ContactsAppUI
 		[STAThread]
 		static void Main()
 		{
-			Application.EnableVisualStyles(); //ff
+			
+			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new ContactsApp());
+			Application.Run(new Form1());
 		}
 	}
 }

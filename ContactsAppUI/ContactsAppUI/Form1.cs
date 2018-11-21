@@ -7,30 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ContactsApp;
 
 namespace ContactsAppUI
 {
-	public partial class СontactsAppDesing : Form
+	public partial class Form1 : Form
 	{
-		public СontactsAppDesing()
+		private List<Contacts> _contacts = new List<Contacts>();
+
+		public Form1()
 		{
 			InitializeComponent();
+			var project = new Project();
 			this.Text = "Главное окно программы";
-			this.Size = new Size(400, 250);
-			
-			//Создаем кнопку
-			var button = new Button();
-			button.Text = "Сменить заголовок окна";
-			button.Size = new Size(150, 25);
-			button.Location = new Point(150, 150);
-			
-			//Помещаем кнопку на форму
-			this.Controls.Add(button);
+			this.Size = new Size(600, 450);
 		}
 
 		private void СontactsAppDesing_Load(object sender, EventArgs e)
 		{
 
+		}
+
+		private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			
 		}
 	}
 }

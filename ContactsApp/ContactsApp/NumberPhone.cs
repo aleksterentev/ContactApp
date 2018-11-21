@@ -32,9 +32,9 @@ namespace ContactsApp
 
 				int firstDigit = (int)(value / Math.Pow(10, (int)Math.Log10(value)));
 
-				if (firstDigit != 7)
+				if (firstDigit != +7)
 				{
-					throw new ArgumentException(@"Number should start from 7");
+					throw new ArgumentException(@"Number should start from +7");
 				}
 
 				_number = value;
