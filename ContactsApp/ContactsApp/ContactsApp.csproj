@@ -44,7 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ICloneable.cs" />
     <Compile Include="NumberPhone.cs" />
     <Compile Include="Contacts.cs" />
     <Compile Include="Project.cs" />

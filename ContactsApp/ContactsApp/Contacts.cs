@@ -6,25 +6,57 @@ using System.Threading.Tasks;
 
 namespace ContactsApp
 {
-	public class Contacts : ICloneable
+	/// <summary>
+	/// Класс контактов
+	/// </summary>
+	public class Contact : System.ICloneable
 	{
+		/// <summary>
+		/// 
+		/// </summary>
+		private string _name;
+
+		private string _sername;
+
+		private NumberPhone _phone;
+
+		private DateTime _birth;
+
+		private string _eMail;
+
+		private string _idVk;
+
+
 		/// <summary>
 		/// Имя
 		/// </summary>
 		public string Name
 		{
-			get
-			{
-				return FirstLetterToUpper(_name);
-			}
-
+			get { return _name; }
 			set
 			{
-				if (value.Length > 50)
+				if ((value.Length) > 50)
 				{
-					throw new ArgumentException(@"String is too long");
+					throw new ArgumentException("Длинна имени не должна превышать 50 символов.");
 				}
+				int i = 0;
+
+				while (i < value.Length)
+				{
+					if ((value[i] < 'A') || (value[i] > 'z') || (value[i] > 'Z' && value[i] < 'a'))
+					{
+						throw new ArgumentException("Имя должно содержать только буквы.");
+					}
+					i++;
+				}
+				i = 0;
+				if (value[i] >= 'a' && value[i] <= 'z')
+				{
+					throw new ArgumentException("Имя должно начинаться с заглавной буквы.");
+				}
+				_name = value;
 			}
+
 		}
 
 		/// <summary>
@@ -32,17 +64,29 @@ namespace ContactsApp
 		/// </summary>
 		public string Sername
 		{
-			get
-			{
-				return FirstLetterToUpper(_sername);
-			}
-
+			get { return _sername; }
 			set
 			{
-				if (value.Length > 50)
+				if ((value.Length) > 50)
 				{
-					throw new ArgumentException(@"String is too long");
+					throw new ArgumentException("Длинна фамилии не должна превышать 50 символов.");
 				}
+				int i = 0;
+
+				while (i < value.Length)
+				{
+					if ((value[i] < 'A') || (value[i] > 'z') || (value[i] > 'Z' && value[i] < 'a'))
+					{
+						throw new ArgumentException("Фамилия должна содержать только буквы.");
+					}
+					i++;
+				}
+				i = 0;
+				if (value[i] >= 'a' && value[i] <= 'z')
+				{
+					throw new ArgumentException("Фамилия должна начинаться с заглавной буквы.");
+				}
+				_sername = value;
 			}
 		}
 
@@ -63,43 +107,20 @@ namespace ContactsApp
 
 		}
 
-		/// <summary>
+		public readonly DateTime dateMin = new DateTime(1900, 01, 01);
+			/// <summary>
 		/// Дата рождения
 		/// </summary>
-		public string Birth
+		public DateTime Birth
 		{
 			get { return _birth; }
-
 			set
 			{
-				if (value.Length > 10)
+				if (value > DateTime.Now && value < dateMin)
 				{
-					throw new ArgumentException(@"String is too long");
+					throw new ArgumentException("Дата рождения должна быть меньше текущей даты и более чем 1900 год");
 				}
-
-				string year;
-				year = "";
-
-				for (int i = 0; i < value.Length; i++)
-				{
-
-					if (value[i] == '.')
-					{
-						break;
-					}
-
-					year = year + value[i];
-
-				}
-
-
-				if (Convert.ToInt32(year) < 1900)
-				{
-					throw new ArgumentException(@"Date must be more than 1900");
-				}
-
-				_birth = value;
-
+				else _birth = value;
 			}
 
 		}
@@ -144,23 +165,14 @@ namespace ContactsApp
 			}
 		}
 
-		/// <summary>
-		/// Перевод первой буквы в верхний регистр
-		/// </summary>
-		/// <param name="str">Строка которую надо перевести</param>
-		/// <returns>Строка с переведенным регистром</returns>
-		public static string FirstLetterToUpper(string str)
-		{
-			if (str.Length > 0) { return Char.ToUpper(str[0]) + str.Substring(1); }
-			return "";
-		}
+
 		/// <summary>
 		/// Клонирование
 		/// </summary>
 		/// <returns></returns>
 		public object Clone()
 		{
-			return new Contacts
+			return new Contact
 			{
 				Name = this.Name,
 				Sername = this.Sername,
@@ -171,11 +183,6 @@ namespace ContactsApp
 			};
 		}
 
-		private string _name;
-		private string _sername;
-		private NumberPhone _phone;
-		private string _birth;
-		private string _eMail;
-		private string _idVk;
+
 	}
 }
