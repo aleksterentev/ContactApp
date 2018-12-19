@@ -58,45 +58,6 @@ namespace ContactsAppUI
 				}
 			}
 
-			private void button5_Click(object sender, EventArgs e)
-			{
-				AddContact form2 = new Form();
-				if (listBox1.SelectedIndex >= 0)
-				{
-					form2.Data._contactsplus = _contactslistone[listBox1.SelectedIndex];
-					form2.Data.TxtBox = _contactslistone[listBox1.SelectedIndex].Sername;
-					form2.ShowDialog();
-					var UpdatedDate = form2.Data;
-					_contactslistone.RemoveAt(listBox1.SelectedIndex);
-					listBox1.Items.RemoveAt(listBox1.SelectedIndex);
-					_contactslistone.Add(UpdatedDate._contactsplus);
-					listBox1.Items.Add(UpdatedDate.TxtBox);
-					NameTextBox2.Text = UpdatedDate._contactsplus.Name;
-					SernameTextBox1.Text = UpdatedDate._contactsplus.Sername;
-					EmailTextBox4.Text = UpdatedDate._contactsplus.Email;
-					VkTextBox5.Text = UpdatedDate._contactsplus.IdVk;
-					BirthTimePicker1.Value = UpdatedDate._contactsplus.Birth;
-					PhoneTextBox3.Text = Convert.ToString(UpdatedDate._contactsplus.Phone.Number);
-				}
-			}
-
-
-			private void button3_Click(object sender, EventArgs e)
-			{
-				DialogResult result = MessageBox.Show("Do you really want to delete the contact?\n" + _contactslistone[listBox1.SelectedIndex].Sername + " " + _contactslistone[listBox1.SelectedIndex].Name, "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-				if (result == DialogResult.OK)
-				{
-					_contactslistone.RemoveAt(listBox1.SelectedIndex);
-					listBox1.Items.RemoveAt(listBox1.SelectedIndex);
-					NameTextBox2.Clear();
-					SernameTextBox1.Clear();
-					EmailTextBox4.Clear();
-					PhoneTextBox3.Clear();
-					VkTextBox5.Clear();
-					BirthTimePicker1.Value = BirthTimePicker1.MaxDate;
-				}
-			}
-
 			private void textBox2_TextChanged(object sender, EventArgs e)
 			{
 
@@ -106,5 +67,43 @@ namespace ContactsAppUI
 			{
 
 			}
+
+		private void button5_Click_1(object sender, EventArgs e)
+		{
+			AddContact form2 = new AddContact();
+			if (listBox1.SelectedIndex >= 0)
+			{
+				form2.Data._contactsplus = _contactslistone[listBox1.SelectedIndex];
+				form2.Data.TxtBox = _contactslistone[listBox1.SelectedIndex].Sername;
+				form2.ShowDialog();
+				var UpdatedDate = form2.Data;
+				_contactslistone.RemoveAt(listBox1.SelectedIndex);
+				listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+				_contactslistone.Add(UpdatedDate._contactsplus);
+				listBox1.Items.Add(UpdatedDate.TxtBox);
+				NameTextBox2.Text = UpdatedDate._contactsplus.Name;
+				SernameTextBox1.Text = UpdatedDate._contactsplus.Sername;
+				EmailTextBox4.Text = UpdatedDate._contactsplus.Email;
+				VkTextBox5.Text = UpdatedDate._contactsplus.IdVk;
+				BirthTimePicker1.Value = UpdatedDate._contactsplus.Birth;
+				PhoneTextBox3.Text = Convert.ToString(UpdatedDate._contactsplus.Phone.Number);
+			}
 		}
+
+		private void button6_Click(object sender, EventArgs e)
+		{
+			DialogResult result = MessageBox.Show("Do you really want to delete the contact?\n" + _contactslistone[listBox1.SelectedIndex].Sername + " " + _contactslistone[listBox1.SelectedIndex].Name, "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+			if (result == DialogResult.OK)
+			{
+				_contactslistone.RemoveAt(listBox1.SelectedIndex);
+				listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+				NameTextBox2.Clear();
+				SernameTextBox1.Clear();
+				EmailTextBox4.Clear();
+				PhoneTextBox3.Clear();
+				VkTextBox5.Clear();
+				BirthTimePicker1.Value = BirthTimePicker1.MaxDate;
+			}
+		}
+	}
 }
