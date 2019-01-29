@@ -28,83 +28,62 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.listBox1 = new System.Windows.Forms.ListBox();
-			this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-			this.button2 = new System.Windows.Forms.Button();
-			this.SernameTextBox1 = new System.Windows.Forms.TextBox();
-			this.NameTextBox2 = new System.Windows.Forms.TextBox();
-			this.PhoneTextBox3 = new System.Windows.Forms.TextBox();
-			this.EmailTextBox4 = new System.Windows.Forms.TextBox();
+			this.SecondNameTextBox1 = new System.Windows.Forms.TextBox();
+			this.NameTextBox1 = new System.Windows.Forms.TextBox();
+			this.PhoneTextBox1 = new System.Windows.Forms.TextBox();
+			this.EmailTextBox1 = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
-			this.button3 = new System.Windows.Forms.Button();
-			this.button4 = new System.Windows.Forms.Button();
 			this.textBox6 = new System.Windows.Forms.TextBox();
 			this.label7 = new System.Windows.Forms.Label();
 			this.BirthTimePicker1 = new System.Windows.Forms.DateTimePicker();
 			this.button1 = new System.Windows.Forms.Button();
-			this.button5 = new System.Windows.Forms.Button();
-			this.button6 = new System.Windows.Forms.Button();
-			this.VkTextBox5 = new System.Windows.Forms.TextBox();
+			this.button2 = new System.Windows.Forms.Button();
+			this.button3 = new System.Windows.Forms.Button();
+			this.VKTextBox1 = new System.Windows.Forms.TextBox();
+			this.ContactlistBox1 = new System.Windows.Forms.ListBox();
+			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.editToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// listBox1
+			// SecondNameTextBox1
 			// 
-			this.listBox1.FormattingEnabled = true;
-			this.listBox1.Location = new System.Drawing.Point(15, 53);
-			this.listBox1.Name = "listBox1";
-			this.listBox1.Size = new System.Drawing.Size(168, 303);
-			this.listBox1.TabIndex = 3;
-			this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+			this.SecondNameTextBox1.Location = new System.Drawing.Point(275, 53);
+			this.SecondNameTextBox1.Name = "SecondNameTextBox1";
+			this.SecondNameTextBox1.Size = new System.Drawing.Size(251, 20);
+			this.SecondNameTextBox1.TabIndex = 6;
 			// 
-			// vScrollBar1
+			// NameTextBox1
 			// 
-			this.vScrollBar1.Location = new System.Drawing.Point(165, 53);
-			this.vScrollBar1.Name = "vScrollBar1";
-			this.vScrollBar1.Size = new System.Drawing.Size(18, 303);
-			this.vScrollBar1.TabIndex = 4;
+			this.NameTextBox1.Location = new System.Drawing.Point(275, 79);
+			this.NameTextBox1.Name = "NameTextBox1";
+			this.NameTextBox1.Size = new System.Drawing.Size(250, 20);
+			this.NameTextBox1.TabIndex = 7;
 			// 
-			// button2
+			// PhoneTextBox1
 			// 
-			this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-			this.button2.Location = new System.Drawing.Point(1, 0);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(46, 23);
-			this.button2.TabIndex = 5;
-			this.button2.Text = "File";
-			this.button2.UseVisualStyleBackColor = true;
+			this.PhoneTextBox1.Location = new System.Drawing.Point(275, 139);
+			this.PhoneTextBox1.Name = "PhoneTextBox1";
+			this.PhoneTextBox1.Size = new System.Drawing.Size(251, 20);
+			this.PhoneTextBox1.TabIndex = 8;
 			// 
-			// SernameTextBox1
+			// EmailTextBox1
 			// 
-			this.SernameTextBox1.Location = new System.Drawing.Point(275, 53);
-			this.SernameTextBox1.Name = "SernameTextBox1";
-			this.SernameTextBox1.Size = new System.Drawing.Size(251, 20);
-			this.SernameTextBox1.TabIndex = 6;
-			// 
-			// NameTextBox2
-			// 
-			this.NameTextBox2.Location = new System.Drawing.Point(275, 79);
-			this.NameTextBox2.Name = "NameTextBox2";
-			this.NameTextBox2.Size = new System.Drawing.Size(250, 20);
-			this.NameTextBox2.TabIndex = 7;
-			// 
-			// PhoneTextBox3
-			// 
-			this.PhoneTextBox3.Location = new System.Drawing.Point(275, 139);
-			this.PhoneTextBox3.Name = "PhoneTextBox3";
-			this.PhoneTextBox3.Size = new System.Drawing.Size(251, 20);
-			this.PhoneTextBox3.TabIndex = 8;
-			// 
-			// EmailTextBox4
-			// 
-			this.EmailTextBox4.Location = new System.Drawing.Point(275, 165);
-			this.EmailTextBox4.Name = "EmailTextBox4";
-			this.EmailTextBox4.Size = new System.Drawing.Size(251, 20);
-			this.EmailTextBox4.TabIndex = 9;
+			this.EmailTextBox1.Location = new System.Drawing.Point(275, 165);
+			this.EmailTextBox1.Name = "EmailTextBox1";
+			this.EmailTextBox1.Size = new System.Drawing.Size(251, 20);
+			this.EmailTextBox1.TabIndex = 9;
 			// 
 			// label1
 			// 
@@ -166,29 +145,9 @@
 			this.label6.TabIndex = 16;
 			this.label6.Text = "vk.com:";
 			// 
-			// button3
-			// 
-			this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-			this.button3.Location = new System.Drawing.Point(46, 0);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(46, 23);
-			this.button3.TabIndex = 17;
-			this.button3.Text = "Edit";
-			this.button3.UseVisualStyleBackColor = true;
-			// 
-			// button4
-			// 
-			this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-			this.button4.Location = new System.Drawing.Point(91, 0);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(46, 23);
-			this.button4.TabIndex = 18;
-			this.button4.Text = "Help";
-			this.button4.UseVisualStyleBackColor = true;
-			// 
 			// textBox6
 			// 
-			this.textBox6.Location = new System.Drawing.Point(46, 29);
+			this.textBox6.Location = new System.Drawing.Point(46, 35);
 			this.textBox6.Name = "textBox6";
 			this.textBox6.Size = new System.Drawing.Size(137, 20);
 			this.textBox6.TabIndex = 19;
@@ -196,7 +155,7 @@
 			// label7
 			// 
 			this.label7.AutoSize = true;
-			this.label7.Location = new System.Drawing.Point(15, 32);
+			this.label7.Location = new System.Drawing.Point(15, 37);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(30, 13);
 			this.label7.TabIndex = 20;
@@ -220,89 +179,166 @@
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
-			// button5
+			// button2
 			// 
-			this.button5.Location = new System.Drawing.Point(51, 362);
-			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(41, 21);
-			this.button5.TabIndex = 23;
-			this.button5.Text = "edit";
-			this.button5.UseVisualStyleBackColor = true;
-			this.button5.Click += new System.EventHandler(this.button5_Click_1);
+			this.button2.Location = new System.Drawing.Point(51, 362);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(41, 21);
+			this.button2.TabIndex = 23;
+			this.button2.Text = "edit";
+			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.button5_Click_1);
 			// 
-			// button6
+			// button3
 			// 
-			this.button6.Location = new System.Drawing.Point(98, 363);
-			this.button6.Name = "button6";
-			this.button6.Size = new System.Drawing.Size(30, 21);
-			this.button6.TabIndex = 24;
-			this.button6.Text = "-";
-			this.button6.UseVisualStyleBackColor = true;
-			this.button6.Click += new System.EventHandler(this.button6_Click);
+			this.button3.Location = new System.Drawing.Point(98, 363);
+			this.button3.Name = "button3";
+			this.button3.Size = new System.Drawing.Size(30, 21);
+			this.button3.TabIndex = 24;
+			this.button3.Text = "-";
+			this.button3.UseVisualStyleBackColor = true;
+			this.button3.Click += new System.EventHandler(this.button6_Click);
 			// 
-			// VkTextBox5
+			// VKTextBox1
 			// 
-			this.VkTextBox5.Location = new System.Drawing.Point(275, 191);
-			this.VkTextBox5.Name = "VkTextBox5";
-			this.VkTextBox5.Size = new System.Drawing.Size(251, 20);
-			this.VkTextBox5.TabIndex = 10;
+			this.VKTextBox1.Location = new System.Drawing.Point(275, 191);
+			this.VKTextBox1.Name = "VKTextBox1";
+			this.VKTextBox1.Size = new System.Drawing.Size(251, 20);
+			this.VKTextBox1.TabIndex = 10;
+			// 
+			// ContactlistBox1
+			// 
+			this.ContactlistBox1.FormattingEnabled = true;
+			this.ContactlistBox1.Location = new System.Drawing.Point(18, 64);
+			this.ContactlistBox1.Name = "ContactlistBox1";
+			this.ContactlistBox1.Size = new System.Drawing.Size(165, 290);
+			this.ContactlistBox1.TabIndex = 25;
+			this.ContactlistBox1.SelectedIndexChanged += new System.EventHandler(this.ContactlistBox1_SelectedIndexChanged);
+			// 
+			// menuStrip1
+			// 
+			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.editToolStripMenuItem,
+            this.aboutToolStripMenuItem});
+			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+			this.menuStrip1.Name = "menuStrip1";
+			this.menuStrip1.Size = new System.Drawing.Size(553, 24);
+			this.menuStrip1.TabIndex = 26;
+			this.menuStrip1.Text = "menuStrip1";
+			// 
+			// fileToolStripMenuItem
+			// 
+			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+			this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+			this.fileToolStripMenuItem.Text = "File";
+			// 
+			// editToolStripMenuItem
+			// 
+			this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addToolStripMenuItem,
+            this.editToolStripMenuItem1,
+            this.removeToolStripMenuItem});
+			this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+			this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+			this.editToolStripMenuItem.Text = "Edit";
+			// 
+			// addToolStripMenuItem
+			// 
+			this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+			this.addToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.addToolStripMenuItem.Text = "Add";
+			this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
+			// 
+			// editToolStripMenuItem1
+			// 
+			this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
+			this.editToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+			this.editToolStripMenuItem1.Text = "Edit";
+			this.editToolStripMenuItem1.Click += new System.EventHandler(this.editToolStripMenuItem1_Click);
+			// 
+			// aboutToolStripMenuItem
+			// 
+			this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem1});
+			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+			this.aboutToolStripMenuItem.Text = "Help";
+			// 
+			// removeToolStripMenuItem
+			// 
+			this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
+			this.removeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.removeToolStripMenuItem.Text = "Remove";
+			this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
+			// 
+			// aboutToolStripMenuItem1
+			// 
+			this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
+			this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+			this.aboutToolStripMenuItem1.Text = "About";
+			this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(553, 396);
-			this.Controls.Add(this.button6);
-			this.Controls.Add(this.button5);
+			this.Controls.Add(this.ContactlistBox1);
+			this.Controls.Add(this.button3);
+			this.Controls.Add(this.button2);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.BirthTimePicker1);
 			this.Controls.Add(this.label7);
 			this.Controls.Add(this.textBox6);
-			this.Controls.Add(this.button4);
-			this.Controls.Add(this.button3);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
-			this.Controls.Add(this.VkTextBox5);
-			this.Controls.Add(this.EmailTextBox4);
-			this.Controls.Add(this.PhoneTextBox3);
-			this.Controls.Add(this.NameTextBox2);
-			this.Controls.Add(this.SernameTextBox1);
-			this.Controls.Add(this.button2);
-			this.Controls.Add(this.vScrollBar1);
-			this.Controls.Add(this.listBox1);
+			this.Controls.Add(this.VKTextBox1);
+			this.Controls.Add(this.EmailTextBox1);
+			this.Controls.Add(this.PhoneTextBox1);
+			this.Controls.Add(this.NameTextBox1);
+			this.Controls.Add(this.SecondNameTextBox1);
+			this.Controls.Add(this.menuStrip1);
+			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "Form1";
 			this.Text = "СontactsAppDesing";
+			this.menuStrip1.ResumeLayout(false);
+			this.menuStrip1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
 		}
 
 		#endregion
-		private System.Windows.Forms.ListBox listBox1;
-		private System.Windows.Forms.VScrollBar vScrollBar1;
-		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.TextBox SernameTextBox1;
-		private System.Windows.Forms.TextBox NameTextBox2;
-		private System.Windows.Forms.TextBox PhoneTextBox3;
-		private System.Windows.Forms.TextBox EmailTextBox4;
+		private System.Windows.Forms.TextBox SecondNameTextBox1;
+		private System.Windows.Forms.TextBox NameTextBox1;
+		private System.Windows.Forms.TextBox PhoneTextBox1;
+		private System.Windows.Forms.TextBox EmailTextBox1;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.Button button3;
-		private System.Windows.Forms.Button button4;
 		private System.Windows.Forms.TextBox textBox6;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.DateTimePicker BirthTimePicker1;
 		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Button button5;
-		private System.Windows.Forms.Button button6;
-		private System.Windows.Forms.TextBox VkTextBox5;
+		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button button3;
+		private System.Windows.Forms.TextBox VKTextBox1;
+		private System.Windows.Forms.ListBox ContactlistBox1;
+		private System.Windows.Forms.MenuStrip menuStrip1;
+		private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem1;
+		private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
 	}
 }

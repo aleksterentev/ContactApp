@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace ContactsApp
 {
 	/// <summary>
 	/// Класс контактов
 	/// </summary>
+	[JsonObject(MemberSerialization.OptIn)]
 	public class Contact : System.ICloneable
 	{
 		/// <summary>
@@ -30,6 +32,7 @@ namespace ContactsApp
 		/// <summary>
 		/// Имя
 		/// </summary>
+		[JsonProperty]
 		public string Name
 		{
 			get { return _name; }
@@ -62,6 +65,7 @@ namespace ContactsApp
 		/// <summary>
 		/// Фамилия
 		/// </summary>
+		[JsonProperty]
 		public string Sername
 		{
 			get { return _sername; }
@@ -93,6 +97,7 @@ namespace ContactsApp
 		/// <summary>
 		/// Телефон
 		/// </summary>
+		[JsonProperty]
 		public NumberPhone Phone
 		{
 			get
@@ -108,9 +113,10 @@ namespace ContactsApp
 		}
 
 		public readonly DateTime dateMin = new DateTime(1900, 01, 01);
-			/// <summary>
+		/// <summary>
 		/// Дата рождения
 		/// </summary>
+		[JsonProperty]
 		public DateTime Birth
 		{
 			get { return _birth; }
@@ -127,6 +133,7 @@ namespace ContactsApp
 		/// <summary>
 		/// Почта
 		/// </summary>
+		 [JsonProperty]
 		public string Email
 		{
 			get
@@ -147,6 +154,7 @@ namespace ContactsApp
 		/// <summary>
 		/// ссылка ВКонтакте
 		/// </summary>
+		[JsonProperty]
 		public string IdVk
 		{
 			get

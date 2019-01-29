@@ -34,11 +34,11 @@
 			this.label4 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
-			this.SernameTextBox1 = new System.Windows.Forms.TextBox();
-			this.NameTextBox2 = new System.Windows.Forms.TextBox();
-			this.PhoneTextBox4 = new System.Windows.Forms.TextBox();
-			this.EmailTextBox5 = new System.Windows.Forms.TextBox();
-			this.VkTextBox6 = new System.Windows.Forms.TextBox();
+			this.SecondNameTextBox1 = new System.Windows.Forms.TextBox();
+			this.NameTextBox1 = new System.Windows.Forms.TextBox();
+			this.PhoneTextBox1 = new System.Windows.Forms.TextBox();
+			this.EmailTextBox1 = new System.Windows.Forms.TextBox();
+			this.VKTextBox1 = new System.Windows.Forms.TextBox();
 			this.BirthTimePicker1 = new System.Windows.Forms.DateTimePicker();
 			this.button1 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
@@ -51,7 +51,7 @@
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(52, 13);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "Surname:";
+			this.label1.Text = "Sername:";
 			// 
 			// label2
 			// 
@@ -98,40 +98,45 @@
 			this.label6.TabIndex = 5;
 			this.label6.Text = "vk.com:";
 			// 
-			// SernameTextBox1
+			// SecondNameTextBox1
 			// 
-			this.SernameTextBox1.Location = new System.Drawing.Point(86, 21);
-			this.SernameTextBox1.Name = "SernameTextBox1";
-			this.SernameTextBox1.Size = new System.Drawing.Size(285, 20);
-			this.SernameTextBox1.TabIndex = 6;
+			this.SecondNameTextBox1.Location = new System.Drawing.Point(86, 21);
+			this.SecondNameTextBox1.Name = "SecondNameTextBox1";
+			this.SecondNameTextBox1.Size = new System.Drawing.Size(285, 20);
+			this.SecondNameTextBox1.TabIndex = 6;
+			this.SecondNameTextBox1.TextChanged += new System.EventHandler(this.SecondNameTextBox1_TextChanged);
 			// 
-			// NameTextBox2
+			// NameTextBox1
 			// 
-			this.NameTextBox2.Location = new System.Drawing.Point(86, 47);
-			this.NameTextBox2.Name = "NameTextBox2";
-			this.NameTextBox2.Size = new System.Drawing.Size(285, 20);
-			this.NameTextBox2.TabIndex = 7;
+			this.NameTextBox1.Location = new System.Drawing.Point(86, 47);
+			this.NameTextBox1.Name = "NameTextBox1";
+			this.NameTextBox1.Size = new System.Drawing.Size(285, 20);
+			this.NameTextBox1.TabIndex = 7;
+			this.NameTextBox1.TextChanged += new System.EventHandler(this.NameTextBox1_TextChanged);
 			// 
-			// PhoneTextBox4
+			// PhoneTextBox1
 			// 
-			this.PhoneTextBox4.Location = new System.Drawing.Point(86, 99);
-			this.PhoneTextBox4.Name = "PhoneTextBox4";
-			this.PhoneTextBox4.Size = new System.Drawing.Size(285, 20);
-			this.PhoneTextBox4.TabIndex = 9;
+			this.PhoneTextBox1.Location = new System.Drawing.Point(86, 99);
+			this.PhoneTextBox1.Name = "PhoneTextBox1";
+			this.PhoneTextBox1.Size = new System.Drawing.Size(285, 20);
+			this.PhoneTextBox1.TabIndex = 9;
+			this.PhoneTextBox1.TextChanged += new System.EventHandler(this.PhoneTextBox1_TextChanged);
 			// 
-			// EmailTextBox5
+			// EmailTextBox1
 			// 
-			this.EmailTextBox5.Location = new System.Drawing.Point(86, 125);
-			this.EmailTextBox5.Name = "EmailTextBox5";
-			this.EmailTextBox5.Size = new System.Drawing.Size(285, 20);
-			this.EmailTextBox5.TabIndex = 10;
+			this.EmailTextBox1.Location = new System.Drawing.Point(86, 125);
+			this.EmailTextBox1.Name = "EmailTextBox1";
+			this.EmailTextBox1.Size = new System.Drawing.Size(285, 20);
+			this.EmailTextBox1.TabIndex = 10;
+			this.EmailTextBox1.TextChanged += new System.EventHandler(this.EmailTextBox1_TextChanged);
 			// 
-			// VkTextBox6
+			// VKTextBox1
 			// 
-			this.VkTextBox6.Location = new System.Drawing.Point(86, 151);
-			this.VkTextBox6.Name = "VkTextBox6";
-			this.VkTextBox6.Size = new System.Drawing.Size(285, 20);
-			this.VkTextBox6.TabIndex = 11;
+			this.VKTextBox1.Location = new System.Drawing.Point(86, 151);
+			this.VKTextBox1.Name = "VKTextBox1";
+			this.VKTextBox1.Size = new System.Drawing.Size(285, 20);
+			this.VKTextBox1.TabIndex = 11;
+			this.VKTextBox1.TextChanged += new System.EventHandler(this.VKTextBox1_TextChanged);
 			// 
 			// BirthTimePicker1
 			// 
@@ -139,6 +144,7 @@
 			this.BirthTimePicker1.Name = "BirthTimePicker1";
 			this.BirthTimePicker1.Size = new System.Drawing.Size(126, 20);
 			this.BirthTimePicker1.TabIndex = 12;
+			this.BirthTimePicker1.ValueChanged += new System.EventHandler(this.BirthTimePicker1_ValueChanged);
 			// 
 			// button1
 			// 
@@ -168,11 +174,11 @@
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.BirthTimePicker1);
-			this.Controls.Add(this.VkTextBox6);
-			this.Controls.Add(this.EmailTextBox5);
-			this.Controls.Add(this.PhoneTextBox4);
-			this.Controls.Add(this.NameTextBox2);
-			this.Controls.Add(this.SernameTextBox1);
+			this.Controls.Add(this.VKTextBox1);
+			this.Controls.Add(this.EmailTextBox1);
+			this.Controls.Add(this.PhoneTextBox1);
+			this.Controls.Add(this.NameTextBox1);
+			this.Controls.Add(this.SecondNameTextBox1);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.label4);
@@ -181,6 +187,7 @@
 			this.Controls.Add(this.label1);
 			this.Name = "AddContact";
 			this.Text = "Add/Edit Contact";
+			this.Load += new System.EventHandler(this.AddContact_Load_1);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -194,11 +201,11 @@
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.TextBox SernameTextBox1;
-		private System.Windows.Forms.TextBox NameTextBox2;
-		private System.Windows.Forms.TextBox PhoneTextBox4;
-		private System.Windows.Forms.TextBox EmailTextBox5;
-		private System.Windows.Forms.TextBox VkTextBox6;
+		private System.Windows.Forms.TextBox SecondNameTextBox1;
+		private System.Windows.Forms.TextBox NameTextBox1;
+		private System.Windows.Forms.TextBox PhoneTextBox1;
+		private System.Windows.Forms.TextBox EmailTextBox1;
+		private System.Windows.Forms.TextBox VKTextBox1;
 		private System.Windows.Forms.DateTimePicker BirthTimePicker1;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Button button2;
