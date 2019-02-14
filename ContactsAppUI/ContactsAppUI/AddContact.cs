@@ -16,28 +16,39 @@ namespace ContactsAppUI
 		private Contact _contactsplus = new Contact();
 		private NumberPhone _phone = new NumberPhone();
 
-		public Contact Contact
-		{
-			get { return _contactsplus; }
-			set
+		/*	public Contact Contact
 			{
-				_contactsplus = new Contact();
-				_contactsplus.Sername = value.Sername;
-				_contactsplus.Name = value.Name;
-				_contactsplus.Phone = value.Phone;
-				_contactsplus.Birth = value.Birth;
-				_contactsplus.Email = value.Email;
-				_contactsplus.IdVk = value.IdVk;
-			}
-		}
-
+				get { return _contactsplus; }
+				set
+				{
+					_contactsplus = new Contact();
+					_contactsplus.Sername = value.Sername;
+					_contactsplus.Name = value.Name;
+					_contactsplus.Phone = value.Phone;
+					_contactsplus.Birth = value.Birth;
+					_contactsplus.Email = value.Email;
+					_contactsplus.IdVk = value.IdVk;
+				}
+			} 
+			*/
 		public AddContact()
 		{
 			InitializeComponent();
 			BirthTimePicker1.MaxDate = DateTime.Now;
 		}
 
+
 		private void button1_Click(object sender, EventArgs e)
+		{
+			Add();
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			Cancel();
+		}
+
+		private void Add()
 		{
 			bool flag;
 			try
@@ -66,10 +77,10 @@ namespace ContactsAppUI
 			}
 		}
 
-		private void button2_Click(object sender, EventArgs e)
+		private void Cancel()
 		{
-			Form1 main = this.Owner as Form1;
-			var form1 = new Form1();
+			MainForm main = this.Owner as MainForm;
+			var form1 = new MainForm();
 			if (main != null)
 			{
 				Data = null;
@@ -77,24 +88,12 @@ namespace ContactsAppUI
 			this.Close();
 		}
 
-		private void AddContact_Load(object sender, EventArgs e)
-		{
-			if (Data._contactsplus != null)
-			{
-				SecondNameTextBox1.Text = Data._contactsplus.Sername;
-				NameTextBox1.Text = Data._contactsplus.Name;
-				EmailTextBox1.Text = Data._contactsplus.Email;
-				VKTextBox1.Text = Data._contactsplus.IdVk;
-				BirthTimePicker1.Value = Data._contactsplus.Birth;
-				PhoneTextBox1.Text = Convert.ToString(Data._contactsplus.Phone.Number);
-			}
-
-		}
 		public class DataInMainForm
 		{
-			public string TxtBox;
-			public Contact _contactsplus;
+		public string TxtBox;
+		public Contact _contactsplus;
 		}
+
 		private DataInMainForm _data = new DataInMainForm();
 		public DataInMainForm Data
 		{
@@ -110,7 +109,15 @@ namespace ContactsAppUI
 
 		private void AddContact_Load_1(object sender, EventArgs e)
 		{
-
+			if (Data._contactsplus != null)
+			{
+				SecondNameTextBox1.Text = Data._contactsplus.Sername;
+				NameTextBox1.Text = Data._contactsplus.Name;
+				EmailTextBox1.Text = Data._contactsplus.Email;
+				VKTextBox1.Text = Data._contactsplus.IdVk;
+				BirthTimePicker1.Value = Data._contactsplus.Birth;
+				PhoneTextBox1.Text = Convert.ToString(Data._contactsplus.Phone.Number);
+			}
 		}
 
 		private void SecondNameTextBox1_TextChanged(object sender, EventArgs e)
@@ -141,11 +148,11 @@ namespace ContactsAppUI
 
 		private void PhoneTextBox1_TextChanged(object sender, EventArgs e)
 		{
-			long _number;
+			long number;
 			try
 			{
-				long.TryParse(PhoneTextBox1.Text, out _number);
-				_contactsplus.Phone.Number = _number;
+				long.TryParse(PhoneTextBox1.Text, out number);
+				_contactsplus.Phone.Number = number;
 				PhoneTextBox1.BackColor = Color.White;
 			}
 			catch (Exception)
@@ -194,5 +201,9 @@ namespace ContactsAppUI
 
 			}
 		}
+		/// <summary>
+		/// Заполнение формы для редактирования
+		/// </summary>
+		
 	}
 }

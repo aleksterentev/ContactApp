@@ -1,6 +1,6 @@
 ﻿namespace ContactsAppUI
 {
-	partial class Form1
+	partial class MainForm
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.SecondNameTextBox1 = new System.Windows.Forms.TextBox();
 			this.NameTextBox1 = new System.Windows.Forms.TextBox();
 			this.PhoneTextBox1 = new System.Windows.Forms.TextBox();
@@ -45,43 +46,63 @@
 			this.button2 = new System.Windows.Forms.Button();
 			this.button3 = new System.Windows.Forms.Button();
 			this.VKTextBox1 = new System.Windows.Forms.TextBox();
-			this.ContactlistBox1 = new System.Windows.Forms.ListBox();
+			this.ContactlistBox = new System.Windows.Forms.ListBox();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.editToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// SecondNameTextBox1
 			// 
+			this.SecondNameTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.SecondNameTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.SecondNameTextBox1.Location = new System.Drawing.Point(275, 53);
 			this.SecondNameTextBox1.Name = "SecondNameTextBox1";
+			this.SecondNameTextBox1.ReadOnly = true;
 			this.SecondNameTextBox1.Size = new System.Drawing.Size(251, 20);
 			this.SecondNameTextBox1.TabIndex = 6;
 			// 
 			// NameTextBox1
 			// 
+			this.NameTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.NameTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.NameTextBox1.Location = new System.Drawing.Point(275, 79);
 			this.NameTextBox1.Name = "NameTextBox1";
+			this.NameTextBox1.ReadOnly = true;
 			this.NameTextBox1.Size = new System.Drawing.Size(250, 20);
 			this.NameTextBox1.TabIndex = 7;
 			// 
 			// PhoneTextBox1
 			// 
+			this.PhoneTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.PhoneTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.PhoneTextBox1.Location = new System.Drawing.Point(275, 139);
 			this.PhoneTextBox1.Name = "PhoneTextBox1";
+			this.PhoneTextBox1.ReadOnly = true;
 			this.PhoneTextBox1.Size = new System.Drawing.Size(251, 20);
 			this.PhoneTextBox1.TabIndex = 8;
 			// 
 			// EmailTextBox1
 			// 
+			this.EmailTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.EmailTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.EmailTextBox1.Location = new System.Drawing.Point(275, 165);
 			this.EmailTextBox1.Name = "EmailTextBox1";
+			this.EmailTextBox1.ReadOnly = true;
 			this.EmailTextBox1.Size = new System.Drawing.Size(251, 20);
 			this.EmailTextBox1.TabIndex = 9;
 			// 
@@ -171,29 +192,42 @@
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(15, 363);
+			this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.button1.AutoSize = true;
+			this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+			this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button1.Location = new System.Drawing.Point(39, 359);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(30, 21);
+			this.button1.Size = new System.Drawing.Size(36, 31);
 			this.button1.TabIndex = 22;
-			this.button1.Text = "+";
-			this.button1.UseVisualStyleBackColor = true;
+			this.button1.UseVisualStyleBackColor = false;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// button2
 			// 
-			this.button2.Location = new System.Drawing.Point(51, 362);
+			this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.button2.AutoSize = true;
+			this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+			this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.button2.Location = new System.Drawing.Point(82, 359);
 			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(41, 21);
+			this.button2.Size = new System.Drawing.Size(34, 32);
 			this.button2.TabIndex = 23;
-			this.button2.Text = "edit";
 			this.button2.UseVisualStyleBackColor = true;
 			this.button2.Click += new System.EventHandler(this.button5_Click_1);
 			// 
 			// button3
 			// 
-			this.button3.Location = new System.Drawing.Point(98, 363);
+			this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.button3.AutoSize = true;
+			this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+			this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button3.Location = new System.Drawing.Point(123, 359);
 			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(30, 21);
+			this.button3.Size = new System.Drawing.Size(34, 31);
 			this.button3.TabIndex = 24;
 			this.button3.Text = "-";
 			this.button3.UseVisualStyleBackColor = true;
@@ -201,19 +235,25 @@
 			// 
 			// VKTextBox1
 			// 
+			this.VKTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.VKTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.VKTextBox1.Location = new System.Drawing.Point(275, 191);
 			this.VKTextBox1.Name = "VKTextBox1";
+			this.VKTextBox1.ReadOnly = true;
 			this.VKTextBox1.Size = new System.Drawing.Size(251, 20);
 			this.VKTextBox1.TabIndex = 10;
 			// 
-			// ContactlistBox1
+			// ContactlistBox
 			// 
-			this.ContactlistBox1.FormattingEnabled = true;
-			this.ContactlistBox1.Location = new System.Drawing.Point(18, 64);
-			this.ContactlistBox1.Name = "ContactlistBox1";
-			this.ContactlistBox1.Size = new System.Drawing.Size(165, 290);
-			this.ContactlistBox1.TabIndex = 25;
-			this.ContactlistBox1.SelectedIndexChanged += new System.EventHandler(this.ContactlistBox1_SelectedIndexChanged);
+			this.ContactlistBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+			this.ContactlistBox.Location = new System.Drawing.Point(18, 64);
+			this.ContactlistBox.Name = "ContactlistBox";
+			this.ContactlistBox.Size = new System.Drawing.Size(165, 290);
+			this.ContactlistBox.TabIndex = 0;
+			this.ContactlistBox.SelectedIndexChanged += new System.EventHandler(this.ContactlistBox_SelectedIndexChanged);
 			// 
 			// menuStrip1
 			// 
@@ -257,6 +297,13 @@
 			this.editToolStripMenuItem1.Text = "Edit";
 			this.editToolStripMenuItem1.Click += new System.EventHandler(this.editToolStripMenuItem1_Click);
 			// 
+			// removeToolStripMenuItem
+			// 
+			this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
+			this.removeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.removeToolStripMenuItem.Text = "Remove";
+			this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
+			// 
 			// aboutToolStripMenuItem
 			// 
 			this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -265,26 +312,19 @@
 			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
 			this.aboutToolStripMenuItem.Text = "Help";
 			// 
-			// removeToolStripMenuItem
-			// 
-			this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-			this.removeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.removeToolStripMenuItem.Text = "Remove";
-			this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
-			// 
 			// aboutToolStripMenuItem1
 			// 
 			this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-			this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+			this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(107, 22);
 			this.aboutToolStripMenuItem1.Text = "About";
 			this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
 			// 
-			// Form1
+			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(553, 396);
-			this.Controls.Add(this.ContactlistBox1);
+			this.Controls.Add(this.ContactlistBox);
 			this.Controls.Add(this.button3);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.button1);
@@ -304,8 +344,8 @@
 			this.Controls.Add(this.SecondNameTextBox1);
 			this.Controls.Add(this.menuStrip1);
 			this.MainMenuStrip = this.menuStrip1;
-			this.Name = "Form1";
-			this.Text = "СontactsAppDesing";
+			this.Name = "MainForm";
+			this.Text = "СontactsApp";
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
 			this.ResumeLayout(false);
@@ -330,8 +370,7 @@
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Button button3;
-		private System.Windows.Forms.TextBox VKTextBox1;
-		private System.Windows.Forms.ListBox ContactlistBox1;
+		private System.Windows.Forms.ListBox ContactlistBox;
 		private System.Windows.Forms.MenuStrip menuStrip1;
 		private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
@@ -340,5 +379,6 @@
 		private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
+		private System.Windows.Forms.TextBox VKTextBox1;
 	}
 }
