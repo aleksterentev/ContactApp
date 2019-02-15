@@ -55,6 +55,7 @@
 			this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -269,6 +270,8 @@
 			// 
 			// fileToolStripMenuItem
 			// 
+			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
 			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
 			this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
 			this.fileToolStripMenuItem.Text = "File";
@@ -315,9 +318,16 @@
 			// aboutToolStripMenuItem1
 			// 
 			this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-			this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(107, 22);
+			this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
 			this.aboutToolStripMenuItem1.Text = "About";
 			this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
+			// 
+			// exitToolStripMenuItem
+			// 
+			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.exitToolStripMenuItem.Text = "Exit";
+			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
 			// 
 			// MainForm
 			// 
@@ -343,6 +353,7 @@
 			this.Controls.Add(this.NameTextBox1);
 			this.Controls.Add(this.SecondNameTextBox1);
 			this.Controls.Add(this.menuStrip1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "MainForm";
 			this.Text = "СontactsApp";
@@ -380,5 +391,6 @@
 		private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
 		private System.Windows.Forms.TextBox VKTextBox1;
+		private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
 	}
 }

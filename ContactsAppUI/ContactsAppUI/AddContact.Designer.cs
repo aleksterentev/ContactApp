@@ -203,6 +203,7 @@
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Name = "AddContact";
+			this.ShowIcon = false;
 			this.Text = "Add/Edit Contact";
 			this.Load += new System.EventHandler(this.AddContact_Load_1);
 			this.ResumeLayout(false);

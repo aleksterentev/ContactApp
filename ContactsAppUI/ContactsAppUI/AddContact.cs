@@ -35,6 +35,7 @@ namespace ContactsAppUI
 		{
 			InitializeComponent();
 			BirthTimePicker1.MaxDate = DateTime.Now;
+
 		}
 
 

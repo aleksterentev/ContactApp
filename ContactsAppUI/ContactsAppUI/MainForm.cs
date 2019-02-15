@@ -25,9 +25,9 @@ namespace ContactsAppUI
 			{
 				_project = ProjectManager.LoadFromFile(_path);
 			}
-
 			ShowListBox();
 		}
+
 		public void ShowListBox()
 		{
 			foreach (Contact t in _project._contactslistone)
@@ -49,26 +49,17 @@ namespace ContactsAppUI
 		private void button1_Click(object sender, EventArgs e)
 		{
 			var form2 = new AddContact();
-			form2.Owner = this;
-			form2.ShowDialog();
+			//form2.Owner = this;
+			//form2.ShowDialog();
 			var UpdatedDate = form2.Data;
-			if (UpdatedDate != null)
+			var i = form2.ShowDialog();
+			if (i == DialogResult.OK)
 			{
 				_project._contactslistone.Add(UpdatedDate._contactsplus);
 				ContactlistBox.Items.Add(UpdatedDate.TxtBox);
+				//e.Cancel = Close();
 			}
 			ProjectManager.SaveToFile(_project, _path);
-		}
-
-
-		private void textBox2_TextChanged(object sender, EventArgs e)
-		{
-
-		}
-
-		private void textBox5_TextChanged(object sender, EventArgs e)
-		{
-
 		}
 
 		private void button5_Click_1(object sender, EventArgs e)
@@ -129,12 +120,11 @@ namespace ContactsAppUI
 		private void addToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			var form2 = new AddContact();
-			form2.Owner = this;
-			form2.ShowDialog();
 			var UpdatedDate = form2.Data;
-			if (UpdatedDate != null)
+			var i = form2.ShowDialog();
+			if (i == DialogResult.OK)
 			{
-				_contactslistone.Add(UpdatedDate._contactsplus);
+				_project._contactslistone.Add(UpdatedDate._contactsplus);
 				ContactlistBox.Items.Add(UpdatedDate.TxtBox);
 			}
 		}
@@ -205,6 +195,11 @@ namespace ContactsAppUI
 				BirthTimePicker1.Value = _contactsplus.Birth;
 				PhoneTextBox1.Text = Convert.ToString(_contactsplus.Phone.Number);
 			}
+		}
+
+		private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			this.Close();
 		}
 	}
 }
