@@ -41,23 +41,16 @@ namespace ContactsAppUI
 		}
 		public List<Contact> _contactslistone = new List<Contact>();
 
-		//private void label6_Click(object sender, EventArgs e)
-		//        {
-		//
-		//        }
 
 		private void button1_Click(object sender, EventArgs e)
 		{
 			var form2 = new AddContact();
-			//form2.Owner = this;
-			//form2.ShowDialog();
 			var UpdatedDate = form2.Data;
 			var i = form2.ShowDialog();
 			if (i == DialogResult.OK)
 			{
 				_project._contactslistone.Add(UpdatedDate._contactsplus);
 				ContactlistBox.Items.Add(UpdatedDate.TxtBox);
-				//e.Cancel = Close();
 			}
 			ProjectManager.SaveToFile(_project, _path);
 		}

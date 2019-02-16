@@ -16,7 +16,7 @@ namespace ContactsApp
 		/// </summary>
 		/// <param name="data">Путь</param>
 		/// <param name="project">Сериализуемый класс</param>
-		public static string DocumentsPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "/ContactApp.txt";
+		public static string Path = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "/ContactApp.txt";
 
 
 		public static void SaveToFile(Project contactList, string fileName)
@@ -59,7 +59,7 @@ namespace ContactsApp
 		/// <returns>Список контактов.</returns>
 		public static Project LoadFromFile()
 		{
-			return LoadFromFile(DocumentsPath);
+			return LoadFromFile(Path);
 		}
 
 	}
