@@ -14,7 +14,7 @@ namespace ContactsAppUI
 	public partial class AddContact : Form
 	{
 		private Contact _contactsplus = new Contact();
-		private NumberPhone _phone = new NumberPhone();
+		private PhoneNumber _phone = new PhoneNumber();
 
 		/*	public Contact Contact
 			{

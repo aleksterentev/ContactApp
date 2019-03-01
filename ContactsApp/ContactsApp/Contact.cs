@@ -20,7 +20,7 @@ namespace ContactsApp
 
 		private string _sername;
 
-		private NumberPhone _phone;
+		private PhoneNumber _phone = new PhoneNumber();
 
 		private DateTime _birth;
 
@@ -98,7 +98,7 @@ namespace ContactsApp
 		/// Телефон
 		/// </summary>
 		[JsonProperty]
-		public NumberPhone Phone
+		public PhoneNumber Phone
 		{
 			get
 			{
@@ -122,18 +122,22 @@ namespace ContactsApp
 			get { return _birth; }
 			set
 			{
-				if (value > DateTime.Now && value < dateMin)
+				if (value > DateTime.Now)
 				{
-					throw new ArgumentException("Дата рождения должна быть меньше текущей даты и более чем 1900 год");
+					throw new ArgumentException("Дата рождения не может быть больше текушей даты");
 				}
-				else _birth = value;
+				if (value.Year < 1900)
+				{
+					throw new ArgumentException("Дата рождения не может быть быть меньше 1900 года");
+				}
+				_birth = value;
 			}
 
 		}
 		/// <summary>
 		/// Почта
 		/// </summary>
-		 [JsonProperty]
+		[JsonProperty]
 		public string Email
 		{
 			get
@@ -144,7 +148,7 @@ namespace ContactsApp
 			set
 			{
 
-				if (value.Length > 50)
+				if (value.Length > 15)
 				{
 					throw new ArgumentException(@"String is too long");
 				}

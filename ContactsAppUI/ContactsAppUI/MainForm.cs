@@ -26,6 +26,17 @@ namespace ContactsAppUI
 				_project = ProjectManager.LoadFromFile(_path);
 			}
 			ShowListBox();
+			ContactlistBox.Sorted = true;
+			Birthday();
+		}
+
+		private void Birthday()
+		{
+			Project birth = Project.Birthday(_project, DateTime.Today);
+			for (int i = 0; i != birth._contactslistone.Count; i++)
+			{
+				Birthdaylabel10.Text = Birthdaylabel10.Text + birth._contactslistone[i].Sername + ". ";
+			}
 		}
 
 		public void ShowListBox()
@@ -51,6 +62,7 @@ namespace ContactsAppUI
 			{
 				_project._contactslistone.Add(UpdatedDate._contactsplus);
 				ContactlistBox.Items.Add(UpdatedDate.TxtBox);
+				_project.Sort(_project._contactslistone);
 			}
 			ProjectManager.SaveToFile(_project, _path);
 		}
@@ -78,7 +90,7 @@ namespace ContactsAppUI
 				VKTextBox1.Text = UpdatedDate._contactsplus.IdVk;
 				BirthTimePicker1.Value = UpdatedDate._contactsplus.Birth;
 				PhoneTextBox1.Text = Convert.ToString(UpdatedDate._contactsplus.Phone.Number);
-				
+				_project.Sort(_project._contactslistone);
 			}
 			ProjectManager.SaveToFile(_project, _path);
 		}
